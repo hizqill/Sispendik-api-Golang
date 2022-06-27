@@ -1,0 +1,1748 @@
+definitions:
+  controllers.InputUpdatePassword:
+    properties:
+      password:
+        type: string
+    required:
+    - password
+    type: object
+  controllers.LoginInput:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  controllers.RegisterInputSekolah:
+    properties:
+      nama:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - nama
+    - password
+    - username
+    type: object
+  controllers.RegisterInputSiswa:
+    properties:
+      kode_verifikasi_pendaftaran:
+        type: string
+      nama:
+        type: string
+      nisn:
+        type: string
+      password:
+        type: string
+      sekolah_id:
+        type: integer
+      username:
+        type: string
+    required:
+    - kode_verifikasi_pendaftaran
+    - nama
+    - nisn
+    - password
+    - sekolah_id
+    - username
+    type: object
+  models.Angkatan:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      nama:
+        type: string
+      sekolah_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  models.AsalsekolahSiswas:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      jenis_sekolah:
+        type: string
+      lokasi_sekolah:
+        type: string
+      no_blanko_skhun:
+        type: string
+      no_peserta_un:
+        type: string
+      no_seri_ijazah:
+        type: string
+      npsn_sekolah:
+        type: string
+      siswa_id:
+        type: integer
+      status_sekolah:
+        type: string
+      tanggal_kelulusan:
+        type: string
+      total_nilai_un:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.BeasiswaSiswas:
+    properties:
+      alasan_menerima_pip:
+        type: string
+      besar_uang_diterima:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      jangka_waktu_non_pip:
+        type: string
+      jenis_beasiswa_non_pip:
+        type: string
+      no_kip:
+        type: string
+      no_kks:
+        type: string
+      no_pkh:
+        type: string
+      periode_menerima_pip:
+        type: string
+      siswa_id:
+        type: integer
+      status_beasiswa_non_pip:
+        type: string
+      status_pip:
+        type: string
+      sumber_beasiswa_non_pip:
+        type: string
+      tahun_mulai_menerima_non_pip:
+        type: string
+      tahun_mulai_menerima_pip:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.Kelas:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      nama:
+        type: string
+      sekolah_id:
+        type: integer
+      tahun_ajaran_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  models.PrestasiSiswas:
+    properties:
+      bidang_prestasi:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      jenis_lomba:
+        type: string
+      peringkat_lomba:
+        type: string
+      peringkat_prestasi:
+        type: string
+      siswa_id:
+        type: integer
+      tahun_meraih_prestasi:
+        type: integer
+      tingkat_lomba:
+        type: string
+      tingkat_prestasi:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.Roles:
+    properties:
+      id:
+        type: integer
+      nama:
+        type: string
+    type: object
+  models.Sekolah:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      kode_verifikasi_pendaftaran_pendidik:
+        type: string
+      kode_verifikasi_pendaftaran_siswa:
+        type: string
+      nama:
+        type: string
+      pendaftaran_pendidik:
+        type: string
+      pendaftaran_siswa:
+        type: string
+      status_menu_pendidik:
+        type: string
+      status_menu_siswa:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: integer
+    type: object
+  models.Siswa:
+    properties:
+      agama:
+        type: string
+      alamat:
+        type: string
+      cita_cita:
+        type: string
+      created_at:
+        type: string
+      desa:
+        type: string
+      email:
+        type: string
+      hafalan_juz:
+        type: string
+      hafalan_surat:
+        type: string
+      hobi:
+        type: string
+      id:
+        type: integer
+      jarak_rumah:
+        type: string
+      jenis_kelamin:
+        type: string
+      jumlah_saudara:
+        type: string
+      kabupaten:
+        type: string
+      kecamatan:
+        type: string
+      kode_pos:
+        type: string
+      nama:
+        type: string
+      nama_ayah:
+        type: string
+      nama_ibu:
+        type: string
+      nama_wali:
+        type: string
+      nik_ayah:
+        type: string
+      nik_ibu:
+        type: string
+      nik_siswa:
+        type: string
+      nik_wali:
+        type: string
+      nis_lokal:
+        type: string
+      nisn:
+        type: string
+      no_hp_ayah:
+        type: string
+      no_hp_ibu:
+        type: string
+      no_hp_siswa:
+        type: string
+      no_hp_wali:
+        type: string
+      no_kk:
+        type: string
+      pekerjaan_ayah:
+        type: string
+      pekerjaan_ibu:
+        type: string
+      pekerjaan_wali:
+        type: string
+      pendidikan_ayah:
+        type: string
+      pendidikan_ibu:
+        type: string
+      pendidikan_wali:
+        type: string
+      penghasilan_orangtua:
+        type: string
+      penghasilan_wali:
+        type: string
+      provinsi:
+        type: string
+      sekolah_id:
+        type: integer
+      tanggal_lahir:
+        type: string
+      tempat_lahir:
+        type: string
+      tempat_tinggal:
+        type: string
+      transportasi:
+        type: string
+      updated_at:
+        type: string
+      user_id:
+        type: integer
+    type: object
+  models.TahunAjaran:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      nama:
+        type: string
+      sekolah_id:
+        type: integer
+      semester:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  models.Users:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      nama:
+        type: string
+      password:
+        type: string
+      role_id:
+        type: integer
+      updated_at:
+        type: string
+      username:
+        type: string
+    type: object
+  sekolahController.InputAngakatan:
+    properties:
+      nama:
+        type: string
+      sekolah_id:
+        type: integer
+    required:
+    - nama
+    - sekolah_id
+    type: object
+  sekolahController.InputKelas:
+    properties:
+      nama:
+        type: string
+      sekolah_id:
+        type: integer
+      tahun_ajaran_id:
+        type: integer
+    required:
+    - nama
+    - sekolah_id
+    - tahun_ajaran_id
+    type: object
+  sekolahController.InputTahunAjaran:
+    properties:
+      nama:
+        type: string
+      sekolah_id:
+        type: integer
+      semester:
+        type: string
+    required:
+    - nama
+    - sekolah_id
+    - semester
+    type: object
+  sekolahController.UpdateInputAngakatan:
+    properties:
+      nama:
+        type: string
+    required:
+    - nama
+    type: object
+  sekolahController.UpdateInputKelas:
+    properties:
+      nama:
+        type: string
+    required:
+    - nama
+    type: object
+  sekolahController.UpdateInputKodeVerifikasiPendidik:
+    properties:
+      kode_verifikasi_pendaftaran_pendidik:
+        type: string
+    type: object
+  sekolahController.UpdateInputKodeVerifikasiSiswa:
+    properties:
+      kode_verifikasi_pendaftaran_siswa:
+        type: string
+    type: object
+  sekolahController.UpdateInputTahunAjaran:
+    properties:
+      nama:
+        type: string
+      semester:
+        type: string
+    required:
+    - nama
+    - semester
+    type: object
+  siswaController.UpdateInputAsalSekolahSiswa:
+    properties:
+      jenis_sekolah:
+        type: string
+      lokasi_sekolah:
+        type: string
+      no_blanko_skhun:
+        type: string
+      no_peserta_un:
+        type: string
+      no_seri_ijazah:
+        type: string
+      npsn_sekolah:
+        type: string
+      status_sekolah:
+        type: string
+      tanggal_kelulusan:
+        type: string
+      total_nilai_un:
+        type: string
+    type: object
+  siswaController.UpdateInputBeasiswaSiswa:
+    properties:
+      alasan_menerima_pip:
+        type: string
+      besar_uang_diterima:
+        type: string
+      jangka_waktu_non_pip:
+        type: string
+      jenis_beasiswa_non_pip:
+        type: string
+      no_kip:
+        type: string
+      no_kks:
+        type: string
+      no_pkh:
+        type: string
+      periode_menerima_pip:
+        type: string
+      status_beasiswa_non_pip:
+        type: string
+      status_pip:
+        type: string
+      sumber_beasiswa_non_pip:
+        type: string
+      tahun_mulai_menerima_non_pip:
+        type: string
+      tahun_mulai_menerima_pip:
+        type: string
+    type: object
+  siswaController.UpdateInputPrestasiSiswa:
+    properties:
+      bidang_prestasi:
+        type: string
+      jenis_lomba:
+        type: string
+      peringkat_lomba:
+        type: string
+      peringkat_prestasi:
+        type: string
+      tahun_meraih_prestasi:
+        type: integer
+      tingkat_lomba:
+        type: string
+      tingkat_prestasi:
+        type: string
+    type: object
+  siswaController.UpdateInputSiswa:
+    properties:
+      agama:
+        type: string
+      alamat:
+        type: string
+      cita_cita:
+        type: string
+      desa:
+        type: string
+      email:
+        type: string
+      hafalan_juz:
+        type: string
+      hafalan_surat:
+        type: string
+      hobi:
+        type: string
+      jarak_rumah:
+        type: string
+      jenis_kelamin:
+        type: string
+      jumlah_saudara:
+        type: string
+      kabupaten:
+        type: string
+      kecamatan:
+        type: string
+      kode_pos:
+        type: string
+      nama:
+        type: string
+      nama_ayah:
+        type: string
+      nama_ibu:
+        type: string
+      nama_wali:
+        type: string
+      nik_ayah:
+        type: string
+      nik_ibu:
+        type: string
+      nik_siswa:
+        type: string
+      nik_wali:
+        type: string
+      nis_lokal:
+        type: string
+      nisn:
+        type: string
+      no_hp_ayah:
+        type: string
+      no_hp_ibu:
+        type: string
+      no_hp_siswa:
+        type: string
+      no_hp_wali:
+        type: string
+      no_kk:
+        type: string
+      pekerjaan_ayah:
+        type: string
+      pekerjaan_ibu:
+        type: string
+      pekerjaan_wali:
+        type: string
+      pendidikan_ayah:
+        type: string
+      pendidikan_ibu:
+        type: string
+      pendidikan_wali:
+        type: string
+      penghasilan_orangtua:
+        type: string
+      penghasilan_wali:
+        type: string
+      provinsi:
+        type: string
+      tanggal_lahir:
+        type: string
+      tempat_lahir:
+        type: string
+      tempat_tinggal:
+        type: string
+      transportasi:
+        type: string
+    required:
+    - nama
+    - nisn
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+paths:
+  /daftar-sekolah:
+    post:
+      description: Daftar Akun Sekolah hanya oleh super admin.
+      parameters:
+      - description: body unutk daftar akun Sekolah
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.RegisterInputSekolah'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Daftar Akun Sekolah (akun, kontrol sekolah -> menu-menu, pendaftaran
+        pendidik/siswa).
+      tags:
+      - Auth
+  /daftar-siswa:
+    post:
+      description: Daftar Akun Siswa table yang terdaftar ada 4 yaitu table users
+        sebagai akun, table siswa sebagai biodata, table prestasi sebagai manajemen
+        prestasi siswa, table asal sekolah sebagai manajemen asal sekolah siswa.
+      parameters:
+      - description: body untuk daftar akun siswa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.RegisterInputSiswa'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Daftar Akun Siswa (akun, biodata, asal sekolah, prestasi, beasiswa).
+      tags:
+      - Auth
+  /ganti-password/{username}:
+    patch:
+      description: Menggati Password akun berdasarkan username.
+      parameters:
+      - description: Username
+        in: path
+        name: username
+        required: true
+        type: string
+      - description: body untuk ganti password
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.InputUpdatePassword'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Users'
+      summary: Menggati Password akun.
+      tags:
+      - Auth
+  /login:
+    post:
+      description: Logging in to get jwt token to access admin or user api by roles.
+      parameters:
+      - description: the body to login a user
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/controllers.LoginInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Login as as user.
+      tags:
+      - Auth
+  /roles:
+    get:
+      description: Get a list of Role User Login.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Roles'
+            type: array
+      summary: Get all Roles User Login.
+      tags:
+      - Roles
+  /sekolah/{id}:
+    delete:
+      description: Menghapus semua data sekolah berdasarkan id. mulai dari akun, .
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - BearerToken: []
+      summary: Menghapus data sekolah.
+      tags:
+      - Siswa
+    get:
+      description: Mendapatkan data sekolah berdasarkan id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      summary: Mendapatkan data sekolah.
+      tags:
+      - Sekolah
+  /sekolah/{id}/aktivasi-menu-pendidik:
+    patch:
+      description: Aktivasi Menu pengisian/update biodata siswa Siswa berdasarkan
+        sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Aktivasi Menu pengisian/update biodata siswa Siswa berdasarkan sekolah
+        id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/aktivasi-menu-siswa:
+    patch:
+      description: Aktivasi Menu pengisian/update biodata siswa Siswa berdasarkan
+        sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Aktivasi Menu pengisian/update biodata siswa Siswa berdasarkan sekolah
+        id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/angkatan:
+    get:
+      description: Mendapatkan semua data angkatan Berdasarkan ID Sekolah.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Angkatan'
+            type: array
+      summary: mendapatkan data angkatan berdasarkan ID Sekolah.
+      tags:
+      - Sekolah -> Angkatan
+  /sekolah/{id}/buka-pendaftaran-pendidik:
+    patch:
+      description: Buka pendafatran pendidik berdasarkan sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Buka pendafatran pendidik berdasarkan sekolah id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/buka-pendaftaran-siswa:
+    patch:
+      description: Buka pendafatran siswa berdasarkan sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Buka pendafatran siswa berdasarkan sekolah id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/kode-verifikasi-pendaftaran-pendidik:
+    patch:
+      description: memperbaharui kode verifikasi pendaftaran pendidik berdasarkan
+        id sekolah.
+      parameters:
+      - description: Tahun ajaran id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update kode verifikasi pendaftaran pendidik
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.UpdateInputKodeVerifikasiPendidik'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Memperbarui kode verifikasi pendaftaran pendidik.
+      tags:
+      - Sekolah
+  /sekolah/{id}/kode-verifikasi-pendaftaran-siswa:
+    patch:
+      description: memperbaharui kode verifikasi pendaftaran siswa berdasarkan id
+        sekolah.
+      parameters:
+      - description: Tahun ajaran id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: the body to update kode verifikasi pendaftaran siswa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.UpdateInputKodeVerifikasiSiswa'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Memperbarui kode verifikasi pendaftaran siswa.
+      tags:
+      - Sekolah
+  /sekolah/{id}/non-aktif-menu-pendidik:
+    patch:
+      description: non aktif Menu pengisian/update biodata siswa Siswa berdasarkan
+        sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: non aktif Menu pengisian/update biodata siswa Siswa berdasarkan sekolah
+        id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/non-aktif-menu-siswa:
+    patch:
+      description: Non aktif Menu pengisian/update biodata siswa Siswa berdasarkan
+        sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Non aktif Menu pengisian/update biodata siswa Siswa berdasarkan sekolah
+        id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/tahun-ajaran:
+    get:
+      description: Mendapatkan semua data tahun ajaran Berdasarkan ID Sekolah.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.TahunAjaran'
+            type: array
+      summary: mendapatkan data tahun ajaran berdasarkan ID Sekolah.
+      tags:
+      - Sekolah -> Tahun Ajaran
+  /sekolah/{id}/tutup-pendaftaran-pendidik:
+    patch:
+      description: Tutup pendafatran pendidik berdasarkan sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Tutup pendafatran pendidik berdasarkan sekolah id.
+      tags:
+      - Sekolah
+  /sekolah/{id}/tutup-pendaftaran-siswa:
+    patch:
+      description: Tutup pendafatran siswa berdasarkan sekolah id.
+      parameters:
+      - description: Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      security:
+      - BearerToken: []
+      summary: Tutup pendafatran siswa berdasarkan sekolah id.
+      tags:
+      - Sekolah
+  /sekolah/angkatan:
+    post:
+      description: Membuat data Angkatan baru.
+      parameters:
+      - description: the body to create a new Angkatan
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.InputAngakatan'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Angkatan'
+      security:
+      - BearerToken: []
+      summary: Membuat data Angkatan barun.
+      tags:
+      - Sekolah -> Angkatan
+  /sekolah/angkatan/{id}:
+    delete:
+      description: Menghapus Sebuah data angkatan  berdasarkan id.
+      parameters:
+      - description: Angkatan id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - BearerToken: []
+      summary: Menghapus data angkatan.
+      tags:
+      - Sekolah -> Angkatan
+    get:
+      description: Mendapatkan data angkatan berdasarkan id.
+      parameters:
+      - description: Angkatan id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Angkatan'
+      summary: Mendapatkan data angkatan.
+      tags:
+      - Sekolah -> Angkatan
+    patch:
+      description: memperbaharui data angkatan berdasarkan id.
+      parameters:
+      - description: Angkatan id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update Angkatan
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.UpdateInputAngakatan'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Angkatan'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data Angkatan.
+      tags:
+      - Sekolah -> Angkatan
+  /sekolah/kelas:
+    post:
+      description: Membuat data Kelas baru.
+      parameters:
+      - description: the body to create a new Kelas
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.InputKelas'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Kelas'
+      security:
+      - BearerToken: []
+      summary: Membuat data Kelas barun.
+      tags:
+      - Sekolah -> Kelas
+  /sekolah/kelas/{id}:
+    delete:
+      description: Menghapus Sebuah data Kelas  berdasarkan id.
+      parameters:
+      - description: Kelas id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - BearerToken: []
+      summary: Menghapus data Kelas.
+      tags:
+      - Sekolah -> Kelas
+    get:
+      description: Mendapatkan data kelas berdasarkan id.
+      parameters:
+      - description: kelas id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Kelas'
+      summary: Mendapatkan data kelas.
+      tags:
+      - Sekolah -> Kelas
+    patch:
+      description: memperbaharui data Kelas berdasarkan id.
+      parameters:
+      - description: Kelas id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update Kelas
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.UpdateInputKelas'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Kelas'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data Kelas.
+      tags:
+      - Sekolah -> Kelas
+  /sekolah/pendaftaran-pendidik-aktif:
+    get:
+      description: Mendapatkan semua ata sekolah yang membuka jalur pendaftaran pendidik.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Sekolah'
+            type: array
+      summary: mendapatkan data sekolah yang membuka jalur pendaftaran pendidik.
+      tags:
+      - Sekolah
+  /sekolah/pendaftaran-siswa-aktif:
+    get:
+      description: Mendapatkan semua ata sekolah yang membuka jalur pendaftaran siswa.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Sekolah'
+            type: array
+      summary: mendapatkan data sekolah yang membuka jalur pendaftaran siswa.
+      tags:
+      - Sekolah
+  /sekolah/tahun-ajaran:
+    post:
+      description: Membuat data tahun ajaran baru.
+      parameters:
+      - description: the body to create a new tahun ajaran
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.InputTahunAjaran'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.TahunAjaran'
+      security:
+      - BearerToken: []
+      summary: Membuat data tahun ajaran barun.
+      tags:
+      - Sekolah -> Tahun Ajaran
+  /sekolah/tahun-ajaran/{id}:
+    delete:
+      description: Menghapus Sebuah data tahun ajaran  berdasarkan id.
+      parameters:
+      - description: tahun ajaran id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - BearerToken: []
+      summary: Menghapus data tahun ajaran.
+      tags:
+      - Sekolah -> Tahun Ajaran
+    get:
+      description: Mendapatkan data tahun ajaran berdasarkan id.
+      parameters:
+      - description: Tahun ajaran id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.TahunAjaran'
+      summary: Mendapatkan data tahun ajaran.
+      tags:
+      - Sekolah -> Tahun Ajaran
+    patch:
+      description: memperbaharui data tahun ajaran berdasarkan id.
+      parameters:
+      - description: Tahun ajaran id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update tahun ajaran
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/sekolahController.UpdateInputTahunAjaran'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.TahunAjaran'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data tahun ajaran.
+      tags:
+      - Sekolah -> Tahun Ajaran
+  /sekolah/tahun-ajaran/{id}/kelas:
+    get:
+      description: Mendapatkan semua data kelas Berdasarkan ID Tahun Ajaran.
+      parameters:
+      - description: Tahun ajaran id  id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Kelas'
+            type: array
+      summary: mendapatkan data kelas berdasarkan ID Tahun Ajaran.
+      tags:
+      - Sekolah -> Kelas
+  /sekolah/user/{id}:
+    get:
+      description: Mendapatkan data sekolah berdasarkan user ID.
+      parameters:
+      - description: User id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Sekolah'
+      summary: Mendapatkan data sekolah berdasarkan user ID.
+      tags:
+      - Sekolah
+  /siswa/{id}:
+    delete:
+      description: Menghapus semua data siswa berdasarkan id. mulai dari akun, biodata,
+        asal sekolah, prestasi, beasiswa.
+      parameters:
+      - description: Siswa id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      security:
+      - BearerToken: []
+      summary: Menghapus data siswa.
+      tags:
+      - Sekolah
+    get:
+      description: Mendapatkan data siswa berdasarkan id.
+      parameters:
+      - description: Siswa id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Siswa'
+      summary: Mendapatkan data siswa.
+      tags:
+      - Siswa
+    patch:
+      description: memperbaharui data siswa berdasarkan id.
+      parameters:
+      - description: Siswa id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update Siswa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/siswaController.UpdateInputSiswa'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Siswa'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data Siswa.
+      tags:
+      - Siswa
+  /siswa/{id}/asal-sekolah:
+    get:
+      description: Mendapatkan data asal sekolah siswa berdasarkan id siswa.
+      parameters:
+      - description: Siswa ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.AsalsekolahSiswas'
+      summary: Mendapatkan data asal sekolah siswa berdasarkan id siswa.
+      tags:
+      - Siswa -> Asal Sekolah
+  /siswa/{id}/beasiswa:
+    get:
+      description: Mendapatkan data beasiswa siswa berdasarkan id siswa.
+      parameters:
+      - description: Siswa ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.BeasiswaSiswas'
+      summary: Mendapatkan data beasiswa siswa berdasarkan id siswa.
+      tags:
+      - Siswa -> Beasiswa
+  /siswa/{id}/prestasi:
+    get:
+      description: Mendapatkan data prestasi siswa berdasarkan id siswa.
+      parameters:
+      - description: Siswa ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.PrestasiSiswas'
+      summary: Mendapatkan data prestasi siswa berdasarkan id siswa.
+      tags:
+      - Siswa -> Prestasi
+  /siswa/asal-sekolah/{id}:
+    get:
+      description: Mendapatkan data asal sekolah siswa berdasarkan id.
+      parameters:
+      - description: asalSekolah_siswa ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.AsalsekolahSiswas'
+      summary: Mendapatkan data asal sekolah siswa.
+      tags:
+      - Siswa -> Asal Sekolah
+    patch:
+      description: memperbaharui data asal sekolah siswa berdasarkan id.
+      parameters:
+      - description: asal_Sekolah id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update beasiswa Siswa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/siswaController.UpdateInputAsalSekolahSiswa'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.AsalsekolahSiswas'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data asal sekolah siswa.
+      tags:
+      - Siswa -> Asal Sekolah
+  /siswa/beasiswa/{id}:
+    get:
+      description: Mendapatkan data beasiswa siswa berdasarkan id.
+      parameters:
+      - description: Beasiswa_siswa ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.BeasiswaSiswas'
+      summary: Mendapatkan data beasiswa siswa.
+      tags:
+      - Siswa -> Beasiswa
+    patch:
+      description: memperbaharui data beasiswa siswa berdasarkan id.
+      parameters:
+      - description: Beasiswa_siswa id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update beasiswa Siswa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/siswaController.UpdateInputBeasiswaSiswa'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.BeasiswaSiswas'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data beasiswa siswa.
+      tags:
+      - Siswa -> Beasiswa
+  /siswa/prestasi/{id}:
+    get:
+      description: Mendapatkan data prestasi siswa berdasarkan id.
+      parameters:
+      - description: Prestasi_siswa ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.PrestasiSiswas'
+      summary: Mendapatkan data prestasi siswa.
+      tags:
+      - Siswa -> Prestasi
+    patch:
+      description: memperbaharui data prestasi siswa berdasarkan id.
+      parameters:
+      - description: Prestasi_siswa id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: the body to update prestasi Siswa
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/siswaController.UpdateInputPrestasiSiswa'
+      - description: 'Authorization. How to input in swagger : ''Bearer <insert_your_token_here>'''
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.PrestasiSiswas'
+      security:
+      - BearerToken: []
+      summary: Memperbarui data prestasi siswa.
+      tags:
+      - Siswa -> Prestasi
+  /siswa/user/{id}:
+    get:
+      description: Mendapatkan data siswa berdasarkan user ID.
+      parameters:
+      - description: User id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Siswa'
+      summary: Mendapatkan data siswa berdasarkan user ID.
+      tags:
+      - Siswa
+  /users:
+    get:
+      description: Get a list of Get All Users.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Users'
+            type: array
+      summary: Get all Get All Users.
+      tags:
+      - Users
+swagger: "2.0"
