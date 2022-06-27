@@ -5,6 +5,7 @@ import (
 	"sispendik-api/config"
 	"sispendik-api/docs"
 	"sispendik-api/routes"
+	"sispendik-api/utils"
 
 	"github.com/joho/godotenv"
 )
@@ -20,9 +21,12 @@ import (
 
 func main() {
 	// for load godotenv
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	environment := utils.Getenv("ENVIRONMENT", "development")
+	if environment == "development" {
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
 	}
 
 	//programmatically set swagger info
